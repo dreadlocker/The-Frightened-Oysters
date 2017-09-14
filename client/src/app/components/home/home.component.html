@@ -1,0 +1,7 @@
+<carousel>
+    <h1 class="text-center">Our latest products</h1>
+    <slide *ngFor="let item of promotions">
+        <img src="{{item.image}}" [routerLink]="['/products']">
+        <h3>{{item.name}} </h3>
+    </slide>
+</carousel>

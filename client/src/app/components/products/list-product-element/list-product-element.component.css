@@ -1,0 +1,32 @@
+.productWrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.productWrap .imageWrap {
+    width: 20%;
+    height: auto;
+    justify-content: flex-start;
+    margin-right: 10%
+}
+.productWrap .imageWrap img {
+    width: 100%;
+}
+
+.productWrap .infoWrap {
+    width: 70%;
+    justify-content: flex-start
+}
+.productWrap .infoWrap .title {
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+.productWrap .infoWrap .productTextUl {
+    list-style-type: circle;
+}
+.productWrap .infoWrap .buttonWrap {
+    margin-top: 7px;
+    max-width: 200px;
+}
+

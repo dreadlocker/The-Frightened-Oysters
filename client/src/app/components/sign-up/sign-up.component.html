@@ -1,0 +1,53 @@
+<h1 class="block">Register</h1>
+<div class="col-md-6 col-md-offset-3">
+    <form [formGroup]="registerForm" (ngSubmit)="register(registerUser.value)" #registerUser=ngForm novalidate>
+        <div class="form-group">
+            <label for="username">Username*</label>
+            <div *ngIf="username.hasError('required') && username.touched" class="validationError">Username is required</div>
+            <div *ngIf="username.hasError('minlength') && username.touched" class="validationError">Username should be more than 3 symbols long</div>
+            <div *ngIf="username.hasError('maxlength') && username.touched" class="validationError">Username should not be more than 100 symbols long</div>
+            <input type="text" class="form-control" name="username" formControlName="username" />
+        </div>
+        <div class="form-group">
+            <label for="password">Password*</label>
+            <div *ngIf="password.hasError('required') && password.touched" class="validationError">Password is required</div>
+            <div *ngIf="password.hasError('minlength') && password.touched" class="validationError">Password should be more than 3 symbols long</div>
+            <div *ngIf="password.hasError('maxlength') && password.touched" class="validationError">Password should not be more than 100 symbols long</div>
+            <input type="password" class="form-control" name="password" formControlName="password" />
+        </div>
+        <div class="form-group">
+            <label for="company">Company*</label>
+            <div *ngIf="company.hasError('required') && company.touched" class="validationError">Company is required</div>
+            <div *ngIf="company.hasError('minlength') && company.touched" class="validationError">Company should be more than 3 symbols long</div>
+            <div *ngIf="company.hasError('maxlength') && company.touched" class="validationError">Company should not be more than 100 symbols long</div>
+            <input type="text" class="form-control" name="company" formControlName="company" />
+        </div>
+        <div class="form-group">
+            <label for="company">Phone*</label>
+            <div *ngIf="phone.hasError('required') && phone.touched" class="validationError">Phone is required</div>
+            <input type="number" class="form-control" name="phone" formControlName="phone" />
+        </div>
+        <div class="form-group">
+            <label for="company">Address*</label>
+            <div *ngIf="address.hasError('required') && address.touched" class="validationError">Address is required</div>
+            <div *ngIf="address.hasError('minlength') && address.touched" class="validationError">Address should be more than 3 symbols long</div>
+            <div *ngIf="address.hasError('maxlength') && address.touched" class="validationError">Address should not be more than 100 symbols long</div>
+            <input type="text" class="form-control" name="address" formControlName="address" />
+        </div>
+        <div class="form-group">
+            <label for="company">Email*</label>
+            <div *ngIf="email.hasError('required') && email.touched" class="validationError">Email is required</div>
+            <div *ngIf="email.hasError('email') && email.touched" class="validationError">Email should be valid</div>
+            <input type="text" class="form-control" name="email" formControlName="email" />
+        </div>
+        <div class="form-group">
+            <label for="company">Avatar URL*</label>
+            <div *ngIf="avatarUrl.hasError('required') && avatarUrl.touched" class="validationError">Avatar URL is required</div>
+            <div *ngIf="avatarUrl.hasError('pattern') && avatarUrl.touched" class="validationError">Avatar URL should be a valid link</div>
+            <input type="text" class="form-control" name="avatarUrl" formControlName="avatarUrl" />
+        </div>
+        <div class="form-group">
+            <input type="submit" [disabled]="!registerUser.valid" class="btn btn-secondary" value="Register">
+        </div>
+    </form>
+</div>

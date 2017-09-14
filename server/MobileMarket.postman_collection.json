@@ -1,0 +1,259 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MobileMarket",
+		"_postman_id": "113a4875-9486-5e54-ef86-56c77df8c1a6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9090/api/auth/register",
+			"request": {
+				"url": "http://localhost:9090/api/auth/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"kolio\",\n\t\"password\": \"123\",\n\t\"company\": \"Facebook\",\n\t\"phone\": \"+359 888 55 66 77\",\n\t\"address\": \"ul. Kolio 23, Sofia\",\n\t\"email\": \"kolio@abv.bg\",\n\t\"avatarUrl\": \"https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/auth/login",
+			"request": {
+				"url": "http://localhost:9090/api/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"kolio\",\n\t\"password\": \"123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/profile",
+			"request": {
+				"url": "http://localhost:9090/api/profile",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/profile",
+			"request": {
+				"url": "http://localhost:9090/api/profile",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"password\": \"123\",\n\t\"company\": \"Facebook2\",\n\t\"phone\": \"+359 888 55 66 77 - 2\",\n\t\"address\": \"ul. Kolio 23, Sofia - 2\",\n\t\"email\": \"kolio@abv.bg2\",\n\t\"avatarUrl\": \"https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png - 2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/products",
+			"request": {
+				"url": "http://localhost:9090/api/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/products/1",
+			"request": {
+				"url": "http://localhost:9090/api/products/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/products",
+			"request": {
+				"url": "http://localhost:9090/api/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"iPhone\",\n\t\"description\": \"telefon iPhone\",\n\t\"price\": 1500,\n\t\"brand\": \"Apple\",\n\t\"model\": \"iPhone 7\",\n\t\"year\": 2017,\n\t\"os\": \"iOS\",\n\t\"color\": \"white\",\n\t\"size\": 4.7,\n\t\"resolution\": \"1x1\",\n\t\"camera\": 12,\n\t\"battery\": 2100,\n\t\"processor\": \"CP 3.2\",\n\t\"memory\": 8,\n\t\"storage\": 126,\n\t\"imageUrl\": \"https://i2.wp.com/szlifestyle.com/sz/wp-content/uploads/2016/07/Martin-Hajek-Black-iPone7-14.jpg?fit=960%2C540\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/products/3",
+			"request": {
+				"url": "http://localhost:9090/api/products/3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"iPhone - ASD\",\r\n\t\"description\": \"telefon iPhone - ASD\",\r\n\t\"price\": 2500,\r\n\t\"brand\": \"Apple - ASd\",\r\n\t\"model\": \"iPhone 7 - ASD\",\r\n\t\"year\": 2018,\r\n\t\"os\": \"iOS - ASd\",\r\n\t\"color\": \"white - asd\",\r\n\t\"size\": 507,\r\n\t\"resolution\": \"1x1 - ASd\",\r\n\t\"camera\": 13,\r\n\t\"battery\": 2200,\r\n\t\"processor\": \"CP 3.2 - ASd\",\r\n\t\"memory\": 8000,\r\n\t\"storage\": 126000,\r\n\t\"imageUrl\": \"https://i2.wp.com/szlifestyle.com/sz/wp-content/uploads/2016/07/Martin-Hajek-Black-iPone7-14.jpg?fit=960%2C540\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/products/3",
+			"request": {
+				"url": "http://localhost:9090/api/products/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/orders",
+			"request": {
+				"url": "http://localhost:9090/api/orders",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"productIds\": [1, 2],\n\t\"name\": \"Ivan Ivanov\",\n\t\"phone\": \"+359 885 66 99 88\",\n\t\"address\": \"ul. Ivan 23, Sofia\",\n\t\"email\": \"ivan@abv.bg\",\n\t\"payment\": \"cash\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/orders",
+			"request": {
+				"url": {
+					"raw": "http://localhost:9090/api/orders?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9090/api/orders/1",
+			"request": {
+				"url": "http://localhost:9090/api/orders/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-cookie",
+						"value": "f5e58b3a-c657-4bc0-b803-831000974d76",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

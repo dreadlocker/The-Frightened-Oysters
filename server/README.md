@@ -1,0 +1,61 @@
+**Server Endpoints**
+
+ - **[POST] /api/auth/login**
+	 - params:
+		 - username: *string*
+		 - password: *string*
+ -  **[POST] /api/auth/register**
+	 - params:
+		 - username: *string*
+		 - password: *string*
+		 - company: *string*
+		 - phone: *string*
+		 - address: *string*
+		 - email: *string*
+		 - avatarUrl: *string*
+ - **[GET] /api/profile**
+	 - cookie: *authenticated*
+ - **[PUT] /api/profile**
+	 - same as POST /api/auth/register (except username)
+ - **[GET] /api/products**
+	 - queries: 
+		 - page: *int*
+		 - myProducts: *bool* (authenticated)
+ - **[GET] /api/products/:id**
+ - **[POST] /api/products**
+	 - cookie: *authenticated*
+	 - params:
+		 - name: *string*
+		 - description: *string*
+		 - price: *string*
+		 - brand: *string*
+		 - model: *string*
+		 - year: *string*
+		 - OS: *string*
+		 - Color: *string*
+		 - Size: *double*
+		 - Resolution: *string*
+		 - Camera: *double*
+		 - Battery: *int*
+		 - Processor: *string*
+		 - Memory: *string*
+		 - Storage: *int*
+		 - imagesUrl: *[string]*
+ - **[PUT] /api/products**
+	 - same as POST
+ - **[DELETE] /api/products/:id**
+	 - cookie: *authenticated*
+ - **[POST] /api/orders**
+	 - params:
+		 - productIds: *int[]*
+		 - name: *string*
+		 - phone: *string*
+		 - address: *string*
+		 - email: *string*
+		 - payment: *string*
+ - **[GET] /api/orders**
+	 - cookie: *authenticated*
+		 - queries:
+			 - page: *int*
+ - **[GET] /api/orders/:id**
+	 - cookie: *authenticated*

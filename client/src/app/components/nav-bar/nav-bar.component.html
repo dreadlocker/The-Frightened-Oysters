@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span> 
+            </button>
+            <a [routerLink]="['/home']" class="navbar-brand">Home</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a [routerLink]="['/products']">Products</a></li>
+                <li *ngIf="isUserLogged"><a [routerLink]="['/add-edit-product']">Add product</a></li>
+                <li *ngIf="isUserLogged"><a [routerLink]="['/orders']">Order history</a></li>
+                <li><a [routerLink]="['/about']">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li *ngIf="!isUserLogged"><a [routerLink]="['/auth/signup']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li *ngIf="!isUserLogged"><a [routerLink]="['/auth/login']"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li *ngIf="isUserLogged"><a [routerLink]="['/profile']"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <li *ngIf="isUserLogged"><a [routerLink]="['/auth/logout']"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li>
+                    <a [routerLink]="['/cart']" class="cart">
+                        <img src="http://www.inmotionhosting.com/support/images/stories/icons/ecommerce/empty-cart-light.png">
+                        {{cartProductsCounter}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

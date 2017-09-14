@@ -1,0 +1,17 @@
+<div class="container" *ngIf="details != undefined">
+    <img src="{{details.imageUrl}}" class="centered">
+    <h3 class="text-center">{{details?.brand}} {{details?.model}} ({{details?.year}})</h3>
+    <h4 class="text-left">Screen size: {{details.size}} inches</h4>
+    <h4 class="text-left">Color: {{details.color}}</h4>
+    <h4 class="text-left">OS: {{details.os}}</h4>
+    <h4 class="text-left">Processor: {{details.processor}}</h4>
+    <h4 class="text-left">Storage: {{details.storage}}</h4>
+    <h4 class="text-left">Memory : {{details.memory}}</h4>
+    <h4 class="text-left">Camera: {{details.camera}}</h4>
+    <h4 class="text-left">Model: {{details.model}}</h4>
+    <h4 class="text-left">BatteryMaH: {{details.battery}} mAh</h4>
+    <h4 class="text-left">Price: {{details.price}} BGN</h4>
+    <h4 class="text-left">Resolution: {{details.resolution}} pixels</h4>
+    <h4 class="text-left">Description: {{details?.description}}</h4>
+    <button class="btn btn-success btn-lg ">Add to cart</button>
+</div>

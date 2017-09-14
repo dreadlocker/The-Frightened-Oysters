@@ -1,0 +1,14 @@
+.productUl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.productUl li {
+    padding: 20px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.col-md-12 {
+    padding: 0;
+}

@@ -1,0 +1,20 @@
+<div class='orderWrap'>
+
+    <div class="title">
+        <a *ngIf='showUrls' [routerLink]="[order?.id]">{{order?.dateCreated | date:'medium'}}</a>
+        <div *ngIf='!showUrls'>{{order?.dateCreated | date:'medium'}}</div>
+    </div>
+
+    <div class='orderInfoBox'>Price: {{order?.price}} BGN</div>
+    <div class='orderInfoBox'>Products count: {{order?.products.length}}</div>
+    <div class='orderInfoBox'>Delivery address: {{order?.address}}</div>
+    <div class='orderInfoBox'>Contact name: {{order?.name}}</div>
+    <div class='orderInfoBox'>Contact phone: {{order?.phone | phone}}</div>
+    <div class='orderInfoBox'>Contact email: {{order?.email}}</div>
+    <div class='orderInfoBox'>Payment way: {{order?.payment}}</div>
+
+    <div *ngIf='showUrls' class="buttonWrap">
+        <a [routerLink]="[order?.id]" class="btn btn-primary btn-sm btn-block" role="button">Details</a>
+    </div>
+
+</div>

@@ -1,0 +1,91 @@
+<h1 class="text-center">Add Products</h1>
+<div class="col-md-6 col-md-offset-3">
+    <form [formGroup]="addProductForm" (ngSubmit)="addProduct(addNewProduct.value)" #addNewProduct=ngForm novalidate>
+        <div class="form-group">
+            <label for="imageUrl">Image*</label>
+            <div *ngIf="imageUrl.hasError('required') && imageUrl.touched" class="validationError">Image is required</div>
+            <input type="text" class="form-control" name="imageUrl" formControlName="imageUrl" placeholder="http://cdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note8-r.jpg" />
+        </div>
+        <div class="form-group">
+            <label for="name">Name*</label>
+            <div *ngIf="name.hasError('required') && name.touched" class="validationError">Name is required</div>
+            <input type="text" class="form-control" name="name" formControlName="name" placeholder="Samsung Galaxy Note 8" />
+        </div>
+        <div class="form-group">
+            <label for="size">Size in inches*</label>
+            <div *ngIf="size.hasError('required') && size.touched" class="validationError">Size is required</div>
+            <input type="text" class="form-control" name="size" formControlName="size" placeholder="6.3" />
+        </div>
+        <div class="form-group">
+            <label for="os">OS*</label>
+            <div *ngIf="os.hasError('required') && os.touched" class="validationError">OS is required</div>
+            <input type="text" class="form-control" name="os" formControlName="os" placeholder="Android 7.1.1 (Nougat)" />
+        </div>
+        <div class="form-group">
+            <label for="processor">Processor*</label>
+            <div *ngIf="processor.hasError('required') && processor.touched" class="validationError">Processor is required</div>
+            <input type="text" class="form-control" name="processor" formControlName="processor" placeholder="Octa-core 4x2.35 GHz" />
+        </div>
+        <div class="form-group">
+            <label for="storage">Storage*</label>
+            <div *ngIf="storage.hasError('required') && storage.touched" class="validationError">Storage is required</div>
+            <input type="text" class="form-control" name="storage" formControlName="storage" placeholder="32 GB" />
+        </div>
+        <div class="form-group">
+            <label for="memory">Memory*</label>
+            <div *ngIf="memory.hasError('required') && memory.touched" class="validationError">Memory is required</div>
+            <input type="text" class="form-control" name="memory" formControlName="memory" placeholder="2GB RAM" />
+        </div>
+        <div class="form-group">
+            <label for="camera">Camera*</label>
+            <div *ngIf="camera.hasError('required') && camera.touched" class="validationError">Camera is required</div>
+            <input type="text" class="form-control" name="camera" formControlName="camera" placeholder="12 MP" />
+        </div>
+        <div class="form-group">
+            <label for="model">Model*</label>
+            <div *ngIf="model.hasError('required') && model.touched" class="validationError">Model is required</div>
+            <input type="text" class="form-control" name="model" formControlName="model" placeholder="Note 8" />
+        </div>
+        <div class="form-group">
+            <label for="battery">Battery in mAh*</label>
+            <div *ngIf="battery.hasError('required') && battery.touched" class="validationError">Battery is required</div>
+            <input type="text" class="form-control" name="battery" formControlName="battery" placeholder="3300" />
+        </div>
+        <div class="form-group">
+            <label for="resolution">Screen resolution in pixels*</label>
+            <div *ngIf="resolution.hasError('required') && resolution.touched" class="validationError">Resolution is required</div>
+            <input type="text" class="form-control" name="resolution" formControlName="resolution" placeholder="1440x2960" />
+        </div>
+        <div class="form-group">
+            <label for="price">Price in BGN*</label>
+            <div *ngIf="price.hasError('required') && price.touched" class="validationError">Price is required</div>
+            <input type="text" class="form-control" name="price" formControlName="price" placeholder="2099" />
+        </div>
+        <div class="form-group">
+            <label for="color">Color*</label>
+            <div *ngIf="color.hasError('required') && color.touched" class="validationError">Color is required</div>
+            <input type="text" class="form-control" name="color" formControlName="color" placeholder="Maple Gold" />
+        </div>
+
+        <div class="form-group">
+            <label for="color">Year*</label>
+            <div *ngIf="year.hasError('required') && year.touched" class="validationError">Year is required</div>
+            <input type="text" class="form-control" name="year" formControlName="year" placeholder="2017" />
+        </div>
+
+        <div class="form-group">
+            <label for="brand">Brand*</label>
+            <div *ngIf="brand.hasError('required') && brand.touched" class="validationError">Brand is required</div>
+            <input type="text" class="form-control" name="brand" formControlName="brand" placeholder="Samsung" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description*</label>
+            <div *ngIf="description.hasError('required') && description.touched" class="validationError">Description is required</div>
+            <input type="text" class="form-control" name="description" formControlName="description" placeholder="original box, battery, charger, headphones, warranty" />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-secondary" [disabled]="!addNewProduct.valid" value="Add product">
+        </div>
+    </form>
+</div>

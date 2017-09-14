@@ -1,0 +1,53 @@
+h1 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+}
+
+.item.active>img {
+    display: block;
+    margin: auto;
+}
+
+h3 {
+    text-align: center;
+}
+
+.carousel-indicators>li.active {
+    background-color: red;
+}
+
+ol.carousel-indicators>li {
+    border: 0.2rem solid #8D8D8D;
+}
+
+.validationError {
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #FFD6D6;
+    color: #FF494C;
+    border-radius: 3px;
+}
+
+.successMessage {
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #C9FFCF;
+    color: #41AD4E;
+    border-radius: 3px;
+}
+
+.summaryWrap {
+    margin: 25px 0;
+    padding: 10px 0;
+    border: 1px dashed #cccccc;
+    border-left: none;
+    border-right: none;
+    text-align: right;
+    clear: both;
+}
+.summaryWrap .sumWrap {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}

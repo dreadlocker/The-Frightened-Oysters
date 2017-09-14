@@ -1,0 +1,110 @@
+<!--<div class="container" *ngIf="details != undefined">-->
+    <!--<img src="{{details.imageUrl}}" class="centered">-->
+    <!--<h3 class="text-center">{{details.name}}</h3>-->
+    <!--<h4 class="text-center">Size: {{details.size}} inches</h4>-->
+    <!--<h4 class="text-center">Color: {{details.color}}</h4>-->
+    <!--<h4 class="text-center">OS: {{details.os}}</h4>-->
+    <!--<h4 class="text-center">Processor: {{details.processor}}</h4>-->
+    <!--<h4 class="text-center">Storage: {{details.storage}} GB</h4>-->
+    <!--<h4 class="text-center">Memory : {{details.memory}} GB</h4>-->
+    <!--<h4 class="text-center">Camera: {{details.camera}}</h4>-->
+    <!--<h4 class="text-center">Model: {{details.model}}</h4>-->
+    <!--<h4 class="text-center">BatteryMaH: {{details.battery}} mAh</h4>-->
+    <!--<h4 class="text-center">Price: {{details.price}}</h4>-->
+    <!--<h4 class="text-center">Resolution: {{details.resolution}}</h4>-->
+    <!--<h4 class="text-center">Description: {{details?.description}}</h4>-->
+    <!--<button class="btn btn-success btn-lg ">Add to cart</button>-->
+<!--</div>-->
+
+
+<div class="col-md-8">
+
+  <form [formGroup]="editForm" (ngSubmit)="update(updateProduct.value)" #updateProduct=ngForm novalidate>
+
+    <div class="form-group">
+      <label for="imageUrl" >Image*</label>
+      <div *ngIf="imageUrl.hasError('required') && imageUrl.touched" class="validationError">Image is required</div>
+      <input type="text" class="form-control" name="imageUrl" formControlName="imageUrl"/>
+    </div>
+
+    <div class="form-group">
+      <label for="name" >Name*</label>
+      <div *ngIf="name.hasError('required') && name.touched" class="validationError">Name is required</div>
+      <input type="text" class="form-control" name="name" formControlName="name"/>
+    </div>
+
+    <div class="form-group">
+      <label for="size" >Size*</label>
+      <div *ngIf="size.hasError('required') && size.touched" class="validationError">Size is required</div>
+      <input type="text" class="form-control" name="size" formControlName="size"/>
+    </div>
+
+
+    <div class="form-group">
+      <label for="os" >OS*</label>
+      <div *ngIf="os.hasError('required') && os.touched" class="validationError">OS is required</div>
+      <input type="text" class="form-control" name="os" formControlName="os"/>
+    </div>
+
+
+    <div class="form-group">
+      <label for="processor" >Processor*</label>
+      <div *ngIf="processor.hasError('required') && processor.touched" class="validationError">Processor is required</div>
+      <input type="text" class="form-control" name="processor" formControlName="processor"/>
+    </div>
+
+    <div class="form-group">
+      <label for="storage" >Storage*</label>
+      <div *ngIf="storage.hasError('required') && storage.touched" class="validationError">Storage is required</div>
+      <input type="text" class="form-control" name="storage" formControlName="storage"/>
+    </div>
+
+    <div class="form-group">
+      <label for="memory" >Memory*</label>
+      <div *ngIf="memory.hasError('required') && memory.touched" class="validationError">Memory is required</div>
+      <input type="text" class="form-control" name="memory" formControlName="memory"/>
+    </div>
+
+    <div class="form-group">
+      <label for="camera" >Camera*</label>
+      <div *ngIf="camera.hasError('required') && camera.touched" class="validationError">Camera is required</div>
+      <input type="text" class="form-control" name="camera" formControlName="camera"/>
+    </div>
+
+
+    <div class="form-group">
+      <label for="model" >Model*</label>
+      <div *ngIf="model.hasError('required') && model.touched" class="validationError">Model is required</div>
+      <input type="text" class="form-control" name="model" formControlName="model"/>
+    </div>
+
+    <div class="form-group">
+      <label for="battery" >Battery*</label>
+      <div *ngIf="battery.hasError('required') && battery.touched" class="validationError">Battery is required</div>
+      <input type="text" class="form-control" name="battery" formControlName="battery"/>
+    </div>
+
+    <div class="form-group">
+      <label for="resolution" >Resolution*</label>
+      <div *ngIf="resolution.hasError('required') && resolution.touched" class="validationError">Resolution is required</div>
+      <input type="text" class="form-control" name="resolution" formControlName="resolution"/>
+    </div>
+
+    <div class="form-group">
+      <label for="price" >Price*</label>
+      <div *ngIf="price.hasError('required') && price.touched" class="validationError">Price is required</div>
+      <input type="text" class="form-control" name="price" formControlName="price"/>
+    </div>
+
+    <div class="form-group">
+      <label for="description" >Description*</label>
+      <div *ngIf="description.hasError('required') && description.touched" class="validationError">Description is required</div>
+      <input type="text" class="form-control" name="description" formControlName="description"/>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" [disabled]="!updateProduct.valid" class="btn btn-secondary" value="Update">
+    </div>
+
+  </form>
+</div>

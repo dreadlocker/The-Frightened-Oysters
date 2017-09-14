@@ -1,0 +1,17 @@
+.orderWrap {
+    width: 100%;
+}
+
+.orderWrap .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.orderWrap .orderInfoBox {
+    width: 100%;
+    display: block;
+}
+.orderWrap .buttonWrap {
+    margin-top: 7px;
+    max-width: 200px;
+}
+

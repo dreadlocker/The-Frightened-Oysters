@@ -1,0 +1,19 @@
+<div class="col-md-12">
+    <h1>Products</h1>
+<div>
+
+<div class="col-md-6">
+    <ul class="productUl">
+        <li *ngFor="let product of productsOdd">
+            <app-list-product-element [product]='product' [cartProducts]='cartProducts'></app-list-product-element>
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <ul class="productUl">
+        <li *ngFor="let product of productsEven">
+            <app-list-product-element [product]='product' [cartProducts]='cartProducts'></app-list-product-element>
+        </li>
+    </ul>
+</div>

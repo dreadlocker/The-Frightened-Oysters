@@ -1,0 +1,30 @@
+<div class="col-md-12">
+    <h1>Cart products</h1>
+
+    <p *ngIf="totalPrice === 0">Your cart is empty. Please add first product.</p>    
+<div>
+
+<div class="col-md-6">
+    <ul class="cartProductsUl">
+        <li *ngFor="let product of cartProductsOdd">
+            <app-list-product-element [product]='product' [showUrls]=false></app-list-product-element>
+            <button class="btn btn-danger btn-sm removeBtn" (click)="removeProduct(product)">Remove</button>
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <ul class="cartProductsUl">
+        <li *ngFor="let product of cartProductsEven">
+            <app-list-product-element [product]='product' [showUrls]=false></app-list-product-element>
+            <button class="btn btn-danger btn-sm removeBtn" (click)="removeProduct(product)">Remove</button>
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-12">
+    <div class="summaryWrap">
+        <div class="sumWrap">Total price: {{totalPrice}} BGN</div>
+        <a *ngIf="totalPrice !== 0" [routerLink]="['/cart/check-out']" class="btn btn-success btn-md">Proceed to check out</a>
+    </div>
+</div>

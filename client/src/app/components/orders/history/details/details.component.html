@@ -1,0 +1,28 @@
+<div class="col-md-12">
+    <h1>Order details</h1>
+</div>
+
+<div *ngIf='order' class="col-md-12">
+    <h3>Delivery information</h3>
+    <app-list-order-element [order]='order' [showUrls]=false></app-list-order-element>
+</div>
+
+<div *ngIf='order' class="col-md-12">
+  <h3>Products information</h3>
+</div>
+
+<div class="col-md-6">
+    <ul class='productUl'>
+        <li *ngFor="let productOdd of productsOdd">
+            <app-list-product-element [product]='productOdd' [showUrls]=false></app-list-product-element>
+        </li> 
+    </ul>
+</div>
+
+<div class="col-md-6">
+    <ul class='productUl'>
+        <li *ngFor="let productEven of productsEven">
+            <app-list-product-element [product]='productEven' [showUrls]=false></app-list-product-element>
+        </li> 
+    </ul>
+</div>

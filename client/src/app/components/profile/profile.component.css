@@ -1,0 +1,27 @@
+.profileInfoWrap {
+    /* padding: 0; */
+    margin: 0 1rem;
+    /* padding-left: 2rem; */
+    /* margin-top: 15px; */
+}
+
+img {
+    max-width: 37rem;
+}
+
+.col-md-8,
+.col-md-offset-1,
+.col-md-3,
+.col-md-4,
+.col-md-7 {
+    padding: 0;
+}
+
+hr {
+    border: 1px solid grey;
+    margin: 0 0 1rem 0;
+}
+
+form {
+    margin: 2rem 0 0 1rem;
+}

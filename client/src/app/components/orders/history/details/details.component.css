@@ -1,0 +1,15 @@
+h3 {
+    text-align: left;
+}
+
+.productUl {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.productUl li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
